@@ -1,9 +1,9 @@
 import express from 'express';
 import usersRoute from './routes/users.route';
 import statusRoute from './routes/status.route';
-import errorHandler from './middlewares/error-handler.middleware';
+import errorHandler from './app/middlewares/error-handler.middleware';
 import authorizationRoute from './routes/authorization.route';
-import jwtAuthenticationMiddleware from './middlewares/jwt-authentication.middleware';
+import jwtAuthenticationMiddleware from './app/middlewares/jwt-authentication.middleware';
 
 const app = express();
 

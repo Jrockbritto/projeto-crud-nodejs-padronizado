@@ -1,9 +1,9 @@
 const { Sequelize } = require('sequelize');
-const environment = require('../config/config');
+const environment = require('../../config/config');
 
-require('dotenv').config(); 
+require('dotenv').config();
 
-if(!process.env.APP_ENVIRONMENT){
+if (!process.env.APP_ENVIRONMENT) {
     throw new Error("Selecione o Ambiente de desenvolvimento");
 }
 //Selects connection according to the environment
