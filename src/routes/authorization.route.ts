@@ -1,8 +1,7 @@
 import { Router } from "express";
 import basicAuthenticationMiddleware from "../app/middlewares/basic-authentication.middleware";
 import jwtAuthenticationMiddleware from "../app/middlewares/jwt-authentication.middleware";
-
-const authorizationController = require("../app/controllers/authorizationController");
+import authorizationController from "../app/controllers/authorizationController";
 
 
 const authorizationRoute = Router();

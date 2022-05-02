@@ -1,12 +1,10 @@
 import { Router } from 'express';
-
+import userController from '../app/controllers/userController';
 // get /users
 // get /users/:uuid
 // post / users
 // put /users/:uuid
 // delete /users/:uuid
-
-const userController = require("../app/controllers/userController");
 
 const usersRoute = Router();
 //List all users

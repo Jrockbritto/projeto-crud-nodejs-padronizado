@@ -1,6 +1,6 @@
 import sequelize from '../sequelize';
 import User from '../models/user.model';
-import { DataTypes } from 'sequelize/types';
+import { DataTypes } from 'sequelize';
 
 const bcrypt = require('bcrypt');
 

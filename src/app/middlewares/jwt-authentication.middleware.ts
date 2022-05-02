@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 import JWT from "jsonwebtoken";
-import ForbiddenError from "../models/errors/forbidden.error.model";
+import ForbiddenError from "../../database/models/errors/forbidden.error.model";
 import dotenv from "dotenv";
 
 dotenv.config();
