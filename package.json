@@ -8,6 +8,7 @@
     "start": "node ./dist/index",
     "build": "tsc -p .",
     "dev": "ts-node-dev --respawn --ignore-watch node_modules --no-notify --transpile-only ./src/index.ts",
+    "keyGen": "node ./src/keyGen/keyGen",
     "db-create": "docker-compose up",
     "db-destroy": "docker-compose down",
     "db-up": "npx sequelize-cli db:migrate",
