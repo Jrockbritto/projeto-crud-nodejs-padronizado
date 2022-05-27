@@ -8,7 +8,7 @@ class authorizationController {
         res.status(StatusCodes.OK).json(users);
     };
 
-    async fetch(req: Request, res: Response, next: NextFunction) {
+    async fetch(req: Request<{ uuid: string }>, res: Response, next: NextFunction) {
         try {
             const uuid = req.params.uuid;
             const user = await userRepository.findById(uuid);
@@ -30,7 +30,7 @@ class authorizationController {
         }
     };
 
-    async update(req: Request, res: Response, next: NextFunction) {
+    async update(req: Request<{ uuid: string }>, res: Response, next: NextFunction) {
         const uuid = req.params.uuid;
         const modifiedUser = req.body;
         modifiedUser.uuid = uuid;
@@ -39,7 +39,7 @@ class authorizationController {
         res.sendStatus(StatusCodes.OK);
     };
 
-    async delete(req: Request, res: Response, next: NextFunction) {
+    async delete(req: Request<{ uuid: string }>, res: Response, next: NextFunction) {
         const uuid = req.params.uuid;
         await userRepository.remove(uuid);
         res.sendStatus(StatusCodes.OK);
